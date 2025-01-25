@@ -1,0 +1,455 @@
+* Root Variables */
+:root {
+    --nav-bg-color: rgba(255, 255, 255, 0.1);
+    --bg-color: #171f2b;
+    --second-bg-color: #1f2733;
+    --third-bg-color: #2d3542;
+    --main-color: #0ef;
+    --white-color: #fff;
+    --tab-list-color: #7c8594;
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    color: var(--white-color);
+    overflow: auto;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+::selection {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 1rem;
+}
+
+::placeholder {
+    color: var(--white-color);
+}
+
+/* Navigation Styles */
+.nav {
+    position: fixed;
+    top: 2.8rem;
+    right: 2rem;
+    width: 45rem;
+    padding: 1rem 0;
+    background: var(--nav-bg-color);
+    border-radius: 1rem;
+    z-index: 100;
+}
+
+.nav .nav-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-list li {
+    position: relative;
+    font-size: 3.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: 0.3s;
+}
+
+.nav-list li i {
+    color: var(--white-color);
+}
+
+.nav-list li:hover i,
+.nav-list li.active i {
+    color: var(--main-color);
+}
+
+.tooltip {
+    position: absolute;
+    align-items: center;
+    top: -2rem;
+    padding: 0.3rem 1rem;
+    background: var(--main-color);
+    border-radius: 0.4rem;
+    font-size: 1.6rem;
+    left: -18px;
+    color: var(--bg-color);
+    font-weight: 500;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.nav-list li:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* General container for sections */
+.container {
+    width: 100vw;
+    height: auto;
+    perspective: 1500px;
+    perspective-origin: 50%;
+    overflow: auto;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+    padding: 0 10%;
+}
+
+.section:nth-child(even) {
+    background: var(--second-bg-color);
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.home-info h1 {
+    font-size: 5.5rem;
+    color: var(--main-color);
+    line-height: 1;
+}
+.home-info h3 {
+    font-size: 3rem;
+    
+}
+
+.desc {
+    margin: 1rem 0 2rem;
+}
+
+.home-info .btn-sci {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    display: inline-flex;
+    padding: 1.2rem 3rem;
+    background: var(--main-color);
+    border-radius: 5rem;
+    box-shadow: none;
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    font-weight: 600;
+}
+
+.btn:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.home-info .btn-sci .sci {
+    margin-left: 2rem;
+}
+
+.home-info .btn-sci .sci a {
+    position: relative;
+    display: inline-flex;
+    padding: 0.8rem;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 0 0.8rem;
+    transition: 0.3s;
+}
+
+.home-info .btn-sci .sci a:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+/* Image Box Styling */
+.img-box {
+    position: relative;
+    width: 24vw;
+    height: 24vw;
+    background: linear-gradient(var(--bg-color), var(--main-color), var(--bg-color));
+    border-radius: 50%;
+    border: 0.4rem solid var(--main-color);
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transition: 1s;
+    margin-top: -2rem;
+}
+
+.img-box.home-img:hover {
+    box-shadow: 0 0 8rem var(--main-color);
+}
+
+.img-box img {
+    position: absolute;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    padding: 5rem 10%;
+    min-height: 100vh;
+}
+
+.about-img {
+    flex: 1;
+    margin-right: 5rem;
+}
+
+.about-content {
+    flex: 2;
+}
+
+.about .heading {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+    
+}
+
+.about img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.img-box.about-img {
+    background: transparent;
+    box-shadow: 0 0 2rem var(--main-color), inset 0 0 1rem var(--main-color);
+}
+
+.img-box.about-img img {
+    z-index: 1;
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.about-info.title {
+    text-align: left;
+}
+.education {
+    max-width:100vw;
+    margin:auto;
+}
+.education h1 {
+    font-size:3.9rem;
+    color:var(--main-color);
+    top:96px;
+    position:relative;
+
+}
+.education .vertical {
+    height:93px;
+    width:1px;
+    background-color: #0ef;
+    margin:0 125px;
+    box-shadow:  0 0 .50rem var(--main-color) ;
+}
+.vertical-title {
+    position:relative;
+    top:89px;
+    width:150px;
+    color:var(--main-color);
+    font-size:19px;
+    left:-41px;
+}
+.vertical-desc{
+    position:relative;
+    top:93px;
+    color:#fff;
+    width:150px;
+    font-size:15px;
+    left:-69px;
+    padding:10px 8px;
+    border-radius:15px;
+    border:var(--main-color) solid 1px;
+    box-shadow:var(--main-color) 0 0 8px;
+}
+.contact {
+    position: relative; /* Ensure .contact is a containing block */
+}
+
+.contact h2 {
+    font-size: 4rem;
+    color: var(--main-color);
+    position: relative; /* Keep it simple */
+    z-index: 10; /* Bring to foreground */
+    top: 97px; /* Reset top for testing */
+}
+.contact .container {
+    padding: 20px;
+    min-height: 200px; /* Ensure enough space */
+}
+
+   
+.contact .row {
+    margin: 60px 0 90px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top:7px;
+}
+.contact .row .col {
+    padding: 0 10px;
+    width: calc(100% / 2 - 50px);
+}
+.contact .row .col p {
+    color:var(--main-color);
+    margin-bottom: 10px;
+    position:relative;
+    left:64px;
+    top:-31px;
+    z-index: 5;
+}
+.contact .row .col p i {
+    margin-right: 10px;
+}
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid var(--main-color);
+    outline: none;
+    border-radius:10px;
+    box-shadow:0 0 .50rem var(--main-color);
+    background-color: #2d3542; /* Update background color */
+    color: var(--white-color); /* Update text color */
+}
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+    color: var(--white-color); /* Update placeholder text color */
+}
+.contact form button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 17px;
+    color: var(--bg-color);
+    margin-top: 10px;
+    border: none;
+    background: var(--main-color);
+    transition: 0.2s;
+    cursor: pointer;
+}
+.contact form button:hover {
+    background:var(--main-color);
+    box-shadow:0 0 .50rem var(--main-color) ;
+}
+.contact .container p{
+    color:var(--main-color);
+    font-size:3.5rem;
+    position:relative;
+    font-style: bold;
+    z-index: 15;
+}
+.projects-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap:2rem;
+}
+.project-card img {
+    width:20vw;
+    border-radius:1rem;
+}
+.project-card{
+    padding:2rem 1rem;
+    position:relative;
+    top:75px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    text-align:center;
+    gap:1.5rem;
+    border:2px solid var(--main-color);
+    border-radius:3rem;
+    cursor: pointer;
+    transition:0.3s ease-in-out;
+    box-shadow:0 0 1rem var(--main-color) ;
+}
+.project-card:hover{
+    background-color: var(--main-color);
+    color:#171f2b;
+    transform:translateY(-7px)scale(1.02);
+}
+.project-card:hover .btn{
+    border:2px solid #171f2b;
+    color:#171f2b;
+}
+.project-card:hover .btn:hover{
+    background-color:#171f2b;
+    color:var(--main-color);
+    border:#171f2b 2px solid;
+    box-shadow:#171f2b 0 0 1rem;
+}
+
+h2.section-title{
+    font-size: 3.5rem;
+    position: relative;
+    top: 32px;
+    color: aqua;
+}
+@media (max-width: 480px) {
+    .home-info h1 {
+        font-size: 4rem;
+    }
+
+    .home-info h3 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        padding: 1rem 2rem;
+    }
+
+    .about .heading {
+        font-size: 3rem;
+    }
+
+    .projects-grid {
+        gap: 1rem;
+    }
+
+    .project-card img {
+        width: 80%;
+    }
+
+    .contact h2 {
+        font-size: 3rem;
+    }
+}
