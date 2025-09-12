@@ -552,14 +552,7 @@ h2.section-title{
             </div>
             <div class="about-content">
                 <h2 class="heading">About <span>Me</span></h2>
-                <p>I aspire to become a proficient web developer, leveraging my skills to create innovative solutions
-                    and
-                    drive technological advancements. My enthusiasm for coding and problem-solving has led me to explore
-                    various programming languages and development frameworks and my specialization in artificial
-                    intelligence and machine learning also helps me explore more domains in the field of technology.
-                    <br>Throughout my studies, I have worked on several projects that showcase my ability to apply
-                    theoretical concepts to real-world applications. I'm continuously expanding my skill set and staying
-                    up-to-date with the latest industry trends.
+                <p>I aspire to become a skilled Full Stack Web Developer, combining my expertise in front-end and back-end development with my knowledge of artificial intelligence and machine learning. My passion for coding and problem-solving drives me to create innovative, scalable, and user-centric web solutions. By integrating AI models into my projects, I aim to build intelligent and adaptive applications that solve real-world challenges. I continuously expand my skill set, stay updated with emerging technologies, and apply theoretical knowledge through hands-on projects to deliver impactful solutions.
                 </p>
             </div>
         </section>
@@ -622,84 +615,136 @@ h2.section-title{
 
 
         <!-- Skills section -->
-        <section class="section skills" id="skills">
-            <h1>Skills</h1>
-            <table class="content-table">
-                <style>
-                    .content-table {
-                        border-collapse: collapse;
-                        margin: 25px 0;
-                        font-size: 1.5rem;
-                        position: relative;
-                        top: 9rem;
-                        left: 88px;
-                        width: 80%;
-                        border-radius: 7px;
-                        overflow: hidden;
-                        box-shadow: 0 0 1rem var(--main-color);
-                    }
-
-                    .content-table thead tr {
-                        background-color: rgba(0, 238, 255, 0.993);
-                        color: var(--bg-color);
-                        text-align: left;
-                        font-weight: bold;
-                    }
-
-                    .content-table th,
-                    .content-table td {
-                        padding: 20px 25px;
-                        border-bottom: 1px solid var(--main-color);
-                    }
-
-                    .content-table tbody tr:nth-of-type(even) {
-                        background-color: var(--bg-color);
-                        color: #0ef;
-                    }
-
-                    .content-table tbody tr:last-of-type {
-                        border-bottom: 2px solid var(--main-color);
-                    }
-
-                    .skills h1 {
-                        color: #0ef;
-                        position: relative;
-                        top: 75px;
-                        left: 88px;
-                        font-size: 4rem;
-                    }
-                </style>
-                <thead>
-                    <tr>
-                        <th>sl.no</th>
-                        <th>skills</th>
-                        <th>description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> 1 </td>
-                        <td>html,css,js</td>
-                        <td>I have a proven ability to leverage HTML, CSS, and JavaScript to develop functional and visually appealing web applications.</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>C programming language</td>
-                        <td>I possess a strong foundation in understanding of C programming. I am eager to learn and apply these skills to build innovative and effective solutions..</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Python</td>
-                        <td>I possess a strong foundation in Python programming, particularly in data analysis and machine learning.</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>BlueJ</td>
-                        <td>Experienced in using BlueJ for object-oriented programming concepts, including class design, object creation, and method calls.</td>
-                    </tr>
-                </tbody>
+        <section class="section" id="skills">
+    <h1 class="section-title">Skills</h1>
+    <div class="skills-section">
+        <!-- Left: Table -->
+        <div class="skills-table">
+            <table>
+                <tr>
+                    <th>Skill</th>
+                    <th>Level</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>Advanced</td>
+                    <td>Semantic, accessible, SEO-friendly markup</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>Advanced</td>
+                    <td>Responsive layouts, Flexbox, Grid, Animations</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Intermediate</td>
+                    <td>DOM manipulation, ES6+, API integration</td>
+                </tr>
+                <tr>
+                    <td>React</td>
+                    <td>Intermediate</td>
+                    <td>Component-based UI, hooks, state management</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>Intermediate</td>
+                    <td>OOP, Data Structures, Algorithms</td>
+                </tr>
+                <tr>
+                    <td>C++</td>
+                    <td>Intermediate</td>
+                    <td>STL, Competitive Programming</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>Intermediate</td>
+                    <td>Procedural Programming, Pointers</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Intermediate</td>
+                    <td>Scripting, Data Analysis, Libraries</td>
+                </tr>
             </table>
-        </section>
+        </div>
+        <!-- Right: 2x4 Grid of Percentage Bars -->
+        <div class="skills-circles skills-circles-grid">
+            <div class="skill-circle">
+                <div class="progress-circle" data-percent="90">
+                    <div class="progress-inner">0%</div>
+                </div>
+                <div class="skill-label">HTML</div>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner" style="width:0%" data-bar="90"></div>
+                </div>
+            </div>
+            <div class="skill-circle">
+                <div class="progress-circle" data-percent="85">
+                    <div class="progress-inner">0%</div>
+                </div>
+                <div class="skill-label">CSS</div>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner" style="width:0%" data-bar="85"></div>
+                </div>
+            </div>
+            <div class="skill-circle">
+                <div class="progress-circle" data-percent="75">
+                    <div class="progress-inner">0%</div>
+                </div>
+                <div class="skill-label">JavaScript</div>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner" style="width:0%" data-bar="75"></div>
+                </div>
+            </div>
+            <div class="skill-circle">
+                <div class="progress-circle" data-percent="70">
+                    <div class="progress-inner">0%</div>
+                </div>
+                <div class="skill-label">React</div>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner" style="width:0%" data-bar="70"></div>
+                </div>
+            </div>
+            <div class="skill-circle">
+                <div class="progress-circle" data-percent="80">
+                    <div class="progress-inner">0%</div>
+                </div>
+                <div class="skill-label">Java</div>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner" style="width:0%" data-bar="80"></div>
+                </div>
+            </div>
+            <div class="skill-circle">
+                <div class="progress-circle" data-percent="78">
+                    <div class="progress-inner">0%</div>
+                </div>
+                <div class="skill-label">C++</div>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner" style="width:0%" data-bar="78"></div>
+                </div>
+            </div>
+            <div class="skill-circle">
+                <div class="progress-circle" data-percent="75">
+                    <div class="progress-inner">0%</div>
+                </div>
+                <div class="skill-label">C</div>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner" style="width:0%" data-bar="75"></div>
+                </div>
+            </div>
+            <div class="skill-circle">
+                <div class="progress-circle" data-percent="80">
+                    <div class="progress-inner">0%</div>
+                </div>
+                <div class="skill-label">Python</div>
+                <div class="progress-bar-outer">
+                    <div class="progress-bar-inner" style="width:0%" data-bar="80"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
         <!-- Projects section -->
         <section class="section projects" id="projects">
             <h2 class="section-title">My Projects</h2>
@@ -714,13 +759,10 @@ h2.section-title{
             </style>
             <div class="projects-grid">
                 <div class="project-card">
-                    <img src="Screenshot 2025-01-21 230718.png" alt="">
-                    <h3>Library Management System</h3>
-                    <p>Using Python, I have developed the Library Managament System a program designed
-                        to
-                        automate library operations, making it easier for both librarians and patrons to manage and
-                        access library resources</p>
-                    <div class="btn"><a href="https://github.com/Sky-210607/python.git">Github code</a> </div>
+                    <img src="Screenshot 2025-09-08 220109.png" alt="">
+                    <h3>Full stack blog website</h3>
+                    <p>A full-stack blog platform built with the MERN stack, featuring secure user authentication, rich text editor, and dynamic content management."</p>
+                    <div class="btn"><a href="https://github.com/Sky-210607/blog-full-stack">Github code</a> </div>
                 </div>
                 <div class="project-card">
                     <img src="Screenshot 2024-11-05 130708.png" alt="">
@@ -829,5 +871,44 @@ h2.section-title{
             });
         </script>
     </div>
+    <script>
+function animateCircle(circle, percent) {
+    let current = 0;
+    const inner = circle.querySelector('.progress-inner');
+    function step() {
+        if (current <= percent) {
+            circle.style.setProperty('--percent', current);
+            inner.textContent = current + '%';
+            current++;
+            requestAnimationFrame(step);
+        }
+    }
+    step();
+}
+
+function animateBar(bar, percent) {
+    setTimeout(() => {
+        bar.style.width = percent + "%";
+    }, 300);
+}
+
+function handleSkillsScroll() {
+    document.querySelectorAll('.skill-circle').forEach(circleWrap => {
+        const circle = circleWrap.querySelector('.progress-circle');
+        const bar = circleWrap.querySelector('.progress-bar-inner');
+        const rect = circleWrap.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight && rect.bottom > 0;
+        if (inView && !circle.classList.contains('animated')) {
+            circle.classList.add('animated');
+            const percent = parseInt(circle.getAttribute('data-percent'), 10);
+            animateCircle(circle, percent);
+            animateBar(bar, percent);
+        }
+    });
+}
+
+window.addEventListener('scroll', handleSkillsScroll);
+window.addEventListener('DOMContentLoaded', handleSkillsScroll);
+</script>
 </body>
 </html>
