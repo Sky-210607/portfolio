@@ -129,10 +129,10 @@ p {
     background: var(--second-bg-color);
 }
 
-/* Specific override for Projects section - Make it taller for 6 cards */
+/* Specific override for Projects section - Increased height for better fit of 6 cards */
 #projects {
     height: auto;
-    min-height: 120vh;
+    min-height: 150vh; /* Increased from 120vh to 150vh to ensure bottom boxes fit comfortably */
     overflow: visible;
     padding: 0 10%;
 }
@@ -512,3 +512,130 @@ h2.section-title {
 .skill-circle {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 140px;
+}
+
+.progress-circle {
+    --size: 90px;
+    --thickness: 7px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--main-color) calc(var(--percent, 0) * 1%),
+        var(--third-bg-color) 0
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: background 0.5s;
+}
+
+.progress-circle::before {
+    content: '';
+    position: absolute;
+    inset: calc(var(--thickness) * 1.2);
+    background: var(--bg-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.progress-inner {
+    position: relative;
+    z-index: 2;
+    color: var(--main-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.skill-label {
+    margin-top: 0.7rem;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Horizontal Progress Bar */
+.progress-bar-outer {
+    width: 90px;
+    height: 10px;
+    background: var(--third-bg-color);
+    border-radius: 5px;
+    margin-top: 0.7rem;
+    box-shadow: 0 0 4px var(--main-color);
+    overflow: hidden;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--main-color), #00bcd4);
+    border-radius: 5px;
+    transition: width 1.2s cubic-bezier(.4,2,.6,1);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .skills-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills-table {
+        width: 100%;
+        min-width: unset;
+        max-width: unset;
+    }
+    .skills-circles {
+        flex-direction: row;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+#skills.section {
+    min-height: 100vh;
+    height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.skills-section {
+    min-height: 70vh;
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.skills-circles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(4, auto);   /* 4 rows */
+    gap: 2.5rem 2.5rem;
+    justify-items: center;
+    align-items: start;
+}
+/* Skills Section Heading - Bigger + Cyan */
+#skills h2.section-title {
+    font-size: 5rem;        /* Same as other sections */
+    color: var(--main-color); /* Cyan color from root */
+    text-align: left;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+#skills .section-title {
+    font-size: 
